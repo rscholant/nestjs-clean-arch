@@ -19,6 +19,7 @@ describe('EnvConfigService unit tests', () => {
   });
 
   it('should return the variable PORT', () => {
+    expect(sut).toBeDefined();
     expect(sut.getAppPort()).toBe(3000);
   });
 

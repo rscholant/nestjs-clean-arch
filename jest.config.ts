@@ -3,9 +3,9 @@ import { compilerOptions } from './tsconfig.json';
 
 export default {
   moduleFileExtensions: ['js', 'json', 'ts'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/',
-  }),
+  modulePaths: ['<rootDir>'],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  rootDir: './',
   testRegex: '.*\\..*spec\\.ts$',
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
